@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>tarea Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <div class="box has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="https://via.placeholder.com/128" alt="Avatar">
+      </figure>
+      <h2 class="title is-4 mt-3">Jandry Zambrano</h2>
+      <p class="subtitle is-6">Desarrollador Web</p>
+      <p id="estado" class="has-text-success mb-3"></p>
+      <div class="buttons is-centered">
+        <button class="button is-primary" onclick="seguir()">Seguir</button>
+        <button class="button is-link" onclick="mensaje()">Mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function seguir() {
+    document.getElementById('estado').textContent = "¡Estás siguiendo a Jandry!";
+  }
+
+  function mensaje() {
+    alert("Mensaje enviado a Jandry ");
+  }
+</script>
+</body>
+</html>

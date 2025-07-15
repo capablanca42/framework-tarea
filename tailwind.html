@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+<div class="flex justify-center gap-5" id="planes">
+  <div class="bg-white p-6 rounded-xl w-72 shadow-md hover:shadow-xl" onclick="seleccionar(this)">
+    <h2 class="text-xl font-bold mb-2">Contado</h2>
+    <p class="text-2xl text-green-500 mb-4">$100</p>
+    <ul class="mb-4">
+      <li>✔ Acceso completo</li>
+      <li>✔ Soporte técnico</li>
+    </ul>
+    <button class="bg-blue-500 text-white px-4 py-2 rounded">Seleccionar</button>
+  </div>
+  <div class="bg-white p-6 rounded-xl w-72 shadow-md hover:shadow-xl" onclick="seleccionar(this)">
+    <h2 class="text-xl font-bold mb-2">6 Meses</h2>
+    <p class="text-2xl text-green-500 mb-4">$60/mes</p>
+    <ul class="mb-4">
+      <li>✔ Soporte extendido</li>
+      <li>✔ Certificado</li>
+    </ul>
+    <button class="bg-blue-500 text-white px-4 py-2 rounded">Seleccionar</button>
+  </div>
+  <div class="bg-white p-6 rounded-xl w-72 shadow-md hover:shadow-xl" onclick="seleccionar(this)">
+    <h2 class="text-xl font-bold mb-2">12 Meses</h2>
+    <p class="text-2xl text-green-500 mb-4">$50/mes</p>
+    <ul class="mb-4">
+      <li>✔ Todo incluido</li>
+      <li>✔ Acceso VIP</li>
+    </ul>
+    <button class="bg-blue-500 text-white px-4 py-2 rounded">Seleccionar</button>
+  </div>
+</div>
+
+<script>
+  function seleccionar(elemento) {
+    const planes = document.querySelectorAll("#planes > div");
+    planes.forEach(div => div.classList.remove("ring-4", "ring-blue-500"));
+
+    elemento.classList.add("ring-4", "ring-blue-500");
+    alert("Plan seleccionado correctamente");
+  }
+</script>
+</body>
+</html>
+
